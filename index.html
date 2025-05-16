@@ -71,6 +71,13 @@
             max-width: 600px;
             width: 100%;
             margin: 0 auto;
+            user-select: none;
+            -webkit-user-select: none;
+            /* Chrome, Safari, newer Edge */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer 10+ */
         }
 
         .profile {
@@ -387,7 +394,7 @@
             }
         }
 
-        @media (max-width: 335px){
+        @media (max-width: 335px) {
             ._335-hide {
                 display: none;
             }
@@ -682,7 +689,7 @@
                     </div>
                 </a>
 
-                <a href="https://wa.me/917566625696" class="contact-option">
+                <a href="https://wa.me/917566625696" target="_blank" class="contact-option">
                     <div class="option-icon whatsapp">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

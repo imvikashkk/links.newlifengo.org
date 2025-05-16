@@ -357,13 +357,15 @@
         /* Toast notification for copy success */
         .toast {
             position: fixed;
+            max-width: 80vw;
+            margin-inline: auto;
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #333;
+            background-color: #4b4b4b;
             color: white;
             padding: 12px 24px;
-            border-radius: 5px;
+            border-radius: 6px;
             opacity: 0;
             transition: opacity 0.3s;
             z-index: 2000;
@@ -806,7 +808,7 @@
             event.stopPropagation();
             navigator.clipboard.writeText(text).then(function () {
                 // Show toast notification
-                showToast(`Copied! \n ${text}`);
+                showToast(`Copied!`);
             }, function (err) {
                 showToast("Failed to Copy!");
                 console.error('Could not copy text: ', err);
@@ -834,18 +836,6 @@
                 toast.classList.remove('show');
             }, 2000);
         }
-
-        // Close modal when clicking the close button
-        document.getElementById('closeModal').addEventListener('click', function () {
-            document.getElementById('phoneModal').style.display = 'none';
-        });
-
-        // Close modal when clicking outside the modal
-        document.getElementById('phoneModal').addEventListener('click', function (event) {
-            if (event.target === this) {
-                this.style.display = 'none';
-            }
-        });
     </script>
 </body>
 
